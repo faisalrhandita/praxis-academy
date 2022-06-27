@@ -1,0 +1,2 @@
+syntax : PS C:\Users\faisal rahman\Documents\praxis-academy\kemampuan-dasar-1\latihan\powershellscripts> & ".\MyFirstScript.ps1"
+hasil : Hello, World!

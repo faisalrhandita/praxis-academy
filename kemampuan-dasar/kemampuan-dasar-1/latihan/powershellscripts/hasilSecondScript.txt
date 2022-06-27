@@ -1,0 +1,101 @@
+1. 	Get-WmiObject -Class Win32_OperatingSystem -ComputerName localhost |
+	Select-Object -Property CSName,LastBootUpTime
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy\kemampuan-dasar-1\latihan\powershellscripts> & ".\MyFirstScript.ps1"
+	hasil : 
+
+CSName          LastBootUpTime
+------          --------------
+LAPTOP-3EUODS5T 20220616195637.500000+420
+
+2.	Get-WmiObject -Class Win32_OperatingSystem -ComputerName localhost |
+	Select-Object -Property CSName,@{n="Last Booted";
+	e={[Management.ManagementDateTimeConverter]::ToDateTime($_.LastBootUpTime)}}
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy\kemampuan-dasar-1\latihan\powershellscripts> & ".\MyFirstScript.ps1"
+	hasil :
+
+CSName          Last Booted
+------          -----------
+LAPTOP-3EUODS5T 6/16/2022 7:56:37 PM
+
+3.	param(
+	[string]$ComputerName
+	)
+	Get-WmiObject -Class Win32_OperatingSystem -ComputerName localhost |
+	Select-Object -Property CSName,@{n="Last Booted";
+	e={[Management.ManagementDateTimeConverter]::ToDateTime($_.LastBootUpTime)}}
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy\kemampuan-dasar-1\latihan\powershellscripts> & help ".\MyFirstScript.ps1"
+	hasil : MySecondScript.ps1 [[-ComputerName] <string>]
+
+4.	<#
+	.SYNOPSIS
+		Shows when last your PC started up.
+	.DESCRIPTION
+		This is a WMI wrapper function to get the time that your PC last started up.
+	.EXAMPLE
+		Get-LastBootTime -ComputerName localhost
+	#>
+	param(
+		[Parameter(Mandatory=$true)][string]$ComputerName
+	)
+	Get-WmiObject -Class Win32_OperatingSystem -ComputerName localhost |
+	Select-Object -Property CSName,@{n="Last Booted";
+	e={[Management.ManagementDateTimeConverter]::ToDateTime($_.LastBootUpTime)}}
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy\kemampuan-dasar-1\latihan\powershellscripts> & help ".\MyFirstScript.ps1"
+	hasil :
+
+NAME
+    C:\Users\faisal rahman\Documents\praxis-academy\kemampuan-dasar-1\latihan\powershellscripts\MySecondScript.ps1
+
+SYNOPSIS
+    Shows when last your PC started up.
+
+
+SYNTAX
+    C:\Users\faisal rahman\Documents\praxis-academy\kemampuan-dasar-1\latihan\powershellscripts\MySecondScript.ps1
+    [-ComputerName] <String> [<CommonParameters>]
+
+
+DESCRIPTION
+    This is a WMI wrapper function to get the time that your PC last started up.
+
+
+RELATED LINKS
+
+REMARKS
+    To see the examples, type: "get-help C:\Users\faisal
+    rahman\Documents\praxis-academy\kemampuan-dasar-1\latihan\powershellscripts\MySecondScript.ps1 -examples".
+    For more information, type: "get-help C:\Users\faisal
+    rahman\Documents\praxis-academy\kemampuan-dasar-1\latihan\powershellscripts\MySecondScript.ps1 -detailed".
+    For technical information, type: "get-help C:\Users\faisal
+    rahman\Documents\praxis-academy\kemampuan-dasar-1\latihan\powershellscripts\MySecondScript.ps1 -full".
+
+
+
+-- More  --
+
+5. <#
+	.SYNOPSIS
+		Shows when last your PC started up.
+	.DESCRIPTION
+		This is a WMI wrapper function to get the time that your PC last started up.
+	.EXAMPLE
+		Get-LastBootTime -ComputerName localhost
+	#>
+	param(
+		[Parameter(Mandatory=$true)][string]$ComputerName
+	)
+	Get-WmiObject -Class Win32_OperatingSystem -ComputerName localhost |
+	Select-Object -Property CSName,@{n="Last Booted";
+	e={[Management.ManagementDateTimeConverter]::ToDateTime($_.LastBootUpTime)}}
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy\kemampuan-dasar-1\latihan\powershellscripts> & ".\MyFirstScript.ps1"
+	hasil :
+
+ComputerName: faisal
+
+CSName          Last Booted
+------          -----------
+LAPTOP-3EUODS5T 6/16/2022 7:56:37 PM
+
+
+
+

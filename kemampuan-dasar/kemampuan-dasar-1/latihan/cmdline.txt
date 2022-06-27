@@ -1,0 +1,147 @@
+1. cd (current directory)
+	syntax : PS C:\Users\faisal rahman\Documents> cd praxis-academy
+	hasil : PS C:\Users\faisal rahman\Documents\praxis-academy>
+
+2. dir
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy> dir
+	hasil : 
+
+Directory: C:\Users\faisal rahman\Documents\praxis-academy
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----         6/27/2022   2:46 PM              0 cmdline.txt
+
+3. mkdir
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy> mkdir kemampuan-dasar-1
+	hasil : 
+
+Directory: C:\Users\faisal rahman\Documents\praxis-academy
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         6/27/2022   2:49 PM                kemampuan-dasar-1
+
+4. copy
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy> COPY "cmdline.txt" ..\
+	hasil : PS C:\Users\faisal rahman\Documents\praxis-academy> (berhasil)
+
+5. move
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy> MOVE cmdline.txt ..\
+	hasil : PS C:\Users\faisal rahman\Documents\praxis-academy> (berhasil)
+
+6. rmdir
+	syntax: PS C:\Users\faisal rahman\Documents\praxis-academy> rmdir hapus
+	hasil : PS C:\Users\faisal rahman\Documents\praxis-academy> (berhasil)
+
+7. date
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy> date
+	hasil : Monday, June 27, 2022 3:05:09 PM
+
+8. find
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy> find "cari aku" find.txt
+	hasil : 
+
+---------- FIND.TXT
+cari aku dong
+
+9. hostname
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy> hostname
+	hasil : LAPTOP-3EUODS5T
+
+10. Get-Date
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy> Get-Date
+	hasil : Monday, June 27, 2022 3:19:22 PM
+
+11. Rename-Item
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy> Rename-Item -Path "find.txt" -NewName "ketemu.txt"
+	hasil : berhasil
+
+12. Remove-Item
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy> Remove-Item ketemu.txt
+	hasil : berhasil
+
+13. Get-Location
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy> Get-Location
+	hasil : 
+
+Path
+----
+C:\Users\faisal rahman\Documents\praxis-academy
+
+14. Get-History
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy> Get-History
+	hasil :
+
+Id CommandLine
+  -- -----------
+   1 cd Documents\
+   2 cd praxis
+   3 cd praxis-academy
+   4 mkdir kemampuan-dasar-1
+   5 Move-Item -Path C:\Users\faisal rahman\Documents\praxis-academy\cmdline.txt -Destination C:\Users\faisal rahman...
+   6 MOVE "cmdline.txt" \kemampuan-dasar-1
+.......... dst
+
+15. tree
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy> tree
+	hasil :
+
+Folder PATH listing for volume Acer
+Volume serial number is A0BE-0CBF
+C:.
+└───kemampuan-dasar-1
+
+16. ping
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy> ping google.com
+	hasil :
+
+Pinging google.com [172.217.194.139] with 32 bytes of data:
+Reply from 172.217.194.139: bytes=32 time=31ms TTL=106
+Reply from 172.217.194.139: bytes=32 time=27ms TTL=106
+Reply from 172.217.194.139: bytes=32 time=27ms TTL=106
+Reply from 172.217.194.139: bytes=32 time=28ms TTL=106
+
+Ping statistics for 172.217.194.139:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 27ms, Maximum = 31ms, Average = 28ms
+
+17. echo
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy> echo hello world
+	hasil :
+ 
+hello
+world
+
+18. ipconfig
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy> ipconfig
+	hasil :
+
+Windows IP Configuration
+
+
+Ethernet adapter vEthernet (Default Switch):
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::65e3:2219:abbe:f766%2
+   IPv4 Address. . . . . . . . . . . : 192.168.192.1
+   Subnet Mask . . . . . . . . . . . : 255.255.240.0
+   Default Gateway . . . . . . . . . :
+
+19. md
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy> md coba
+	hasil :
+
+Directory: C:\Users\faisal rahman\Documents\praxis-academy
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         6/27/2022   3:45 PM                coba
+
+20. clear
+	syntax : PS C:\Users\faisal rahman\Documents\praxis-academy> clear
+	hasil : berhasil
